@@ -1,0 +1,7 @@
+How to generated API rest documentation for play applications with Spring RST docs and slate.
+
+what is used:
+1. https://www.playframework.com/
+2. http://projects.spring.io/spring-restdocs/ must be 1.1.x or higher
+3. https://github.com/rest-assured/rest-assured
+4. https://github.com/tripit/slate
