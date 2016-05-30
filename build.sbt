@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
   ws,
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
   "com.jayway.restassured" % "rest-assured" % "2.9.0" % Test,
-  "org.springframework.restdocs" % "spring-restdocs-core" % "1.1.0.RC1" % Test
+  "org.springframework.restdocs" % "spring-restdocs-restassured" % "1.1.0.RC1" % Test
 )
 
 resolvers ++= Seq(
