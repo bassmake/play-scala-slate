@@ -20,6 +20,16 @@ resolvers ++= Seq(
   "spring-snapshots" at "https://repo.spring.io/libs-snapshot"
 )
 
+lazy val bundleInstall = taskKey[Unit]("ruby bundle install for slate")
+bundleInstall := {
+  Process("bundle" :: "install" :: Nil, new File("./slate")) ! streams.value.log
+}
 
-// need to add `bundle install` and `bundle exec middleman build` here
+lazy val middlemanBuild = taskKey[Unit]("build slate doc")
+middlemanBuild := {
+//  test.value
+  bundleInstall.value
+  Process("bundle" :: "exec" :: "middleman" :: "build" :: Nil, new File("./slate")) ! streams.value.log
+}
+
 // documentation now available on http://localhost:9000/assets/docs/index.html
