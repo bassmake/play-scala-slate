@@ -19,3 +19,7 @@ resolvers ++= Seq(
   "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases",
   "spring-snapshots" at "https://repo.spring.io/libs-snapshot"
 )
+
+
+// need to add `bundle install` and `bundle exec middleman build` here
+// documentation now available on http://localhost:9000/assets/docs/index.html
